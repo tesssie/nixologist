@@ -1,0 +1,10 @@
+{
+  "locales": ["en", "mr"],
+  "defaultLocale": "mr",
+  "pages": {
+    "*": ["common"],
+    "/": ["home"],
+    "/chakra": ["chakra"]
+  }
+}
+

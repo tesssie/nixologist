@@ -10,9 +10,12 @@ import {
   theme,
 } from "@chakra-ui/react"
 import { ColorModeSwitcher, Logo } from "@components"
+import useTranslation from "next-translate/useTranslation"
 
-export const Chakra = () => (
-  <ChakraProvider theme={theme}>
+export const Chakra = () => {
+  const { t, lang } = useTranslation('chakra')
+  const documentation = t('documentation')
+  return (<ChakraProvider theme={theme}>
     <Box textAlign="center" fontSize="xl">
       <Grid minH="100vh" p={3}>
         <ColorModeSwitcher justifySelf="flex-end" />
@@ -28,13 +31,13 @@ export const Chakra = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn Chakra
+            {documentation}
           </Link>
         </VStack>
       </Grid>
     </Box>
-  </ChakraProvider>
-)
+  </ChakraProvider>)
+}
 
 export default Chakra
 
