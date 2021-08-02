@@ -1,3 +1,5 @@
+/* eslint @typescript-eslint/no-var-requires: "off" */
+
 module.exports = {
   reactStrictMode: true,
 }
@@ -5,4 +7,3 @@ module.exports = {
 const nextTranslate = require('next-translate')
 
 module.exports = nextTranslate()
-
