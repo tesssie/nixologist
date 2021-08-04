@@ -9,7 +9,7 @@ import {
   Grid,
   theme,
 } from '@chakra-ui/react'
-import { ColorModeSwitcher, Logo } from '@components'
+import { ColorModeSwitcher, LanguageSwitcher, Logo } from '@components'
 import useTranslation from 'next-translate/useTranslation'
 
 export const Chakra = () => {
@@ -20,6 +20,7 @@ export const Chakra = () => {
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
           <ColorModeSwitcher justifySelf="flex-end" />
+          <LanguageSwitcher justifySelf="flex-end" />
           <VStack spacing={8}>
             <Logo h="40vmin" pointerEvents="none" />
             <Text>

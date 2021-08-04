@@ -1,2 +1,2 @@
-export { ColorModeSwitcher } from './color-mode-switcher'
+export { ColorModeSwitcher, LanguageSwitcher } from './color-mode-switcher'
 export { Logo } from './logo'
