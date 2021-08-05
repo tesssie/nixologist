@@ -5,3 +5,4 @@ export {
   GitHubButton,
 } from './buttons'
 export { Logo } from './logo'
+export { Navbar } from './navbar'
