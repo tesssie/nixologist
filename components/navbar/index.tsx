@@ -1,15 +1,17 @@
 import React from 'react'
-import {
-  ColorModeSwitcher,
-  GitHubButton,
-  LanguageSwitcher,
-  Logo,
-  SponsorButton,
-} from '@components'
+
 import { Box, Flex, Link, HStack } from '@chakra-ui/layout'
 import { chakra } from '@chakra-ui/system'
 
 import { useViewportScroll } from 'framer-motion'
+
+import {
+  ColorModeSwitcher,
+  GitHubButton,
+  LanguageSwitcher,
+  SponsorButton,
+} from './buttons'
+import { Logo } from './logo'
 
 export const Navbar = () => {
   const ref = React.useRef()
