@@ -2,41 +2,42 @@ import * as React from 'react'
 import {
   ChakraProvider,
   Box,
-  Text,
-  Link,
-  VStack,
-  Code,
+  Flex,
   Grid,
-  theme,
+  extendTheme,
+  useMediaQuery,
 } from '@chakra-ui/react'
-import { Navbar, Logo } from '@components'
+import { Navbar, Stepper } from '@components'
 import useTranslation from 'next-translate/useTranslation'
+import { StepsStyleConfig as Steps } from 'chakra-ui-steps';
+
+const theme = extendTheme({
+  components: {
+    Steps,
+  }
+})
 
 export const Chakra = () => {
   const { t, lang } = useTranslation('chakra')
   const documentation = t('documentation')
+  const [isMobile] = useMediaQuery("(max-width: 43em)")
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <VStack spacing={8}>
-            <Logo h="24px" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {lang} {documentation}
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+      <Flex
+        p={3}
+        minH="100vh"
+        maxW={isMobile ? "100%" : "50vmax"}
+        margin="0 auto"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Box textAlign="center" fontSize="xl">
+          <Grid minH="100vh" p={3}>
+            <Stepper />
+          </Grid>
+        </Box>
+      </Flex>
     </ChakraProvider>
   )
 }
