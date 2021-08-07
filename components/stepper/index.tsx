@@ -35,8 +35,8 @@ export const Stepper = (): JSX.Element => {
       <Head />
       <VStack width="100%">
         <Steps orientation="vertical" activeStep={activeStep}>
-          {steps.map(({ label, content }) => (
-            <Step label={label} key={label}>
+          {steps.map(({ label, content, icon }) => (
+            <Step label={label} key={label} icon={icon}>
               {content}
             </Step>
           ))}

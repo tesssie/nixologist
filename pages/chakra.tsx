@@ -26,14 +26,13 @@ export const Chakra = () => {
       <Navbar />
       <Flex
         p={3}
-        minH="100vh"
         maxW={isMobile ? "100%" : "50vmax"}
         margin="0 auto"
         alignItems="center"
         justifyContent="center"
       >
         <Box textAlign="center" fontSize="xl">
-          <Grid minH="100vh" p={3}>
+          <Grid p={3}>
             <Stepper />
           </Grid>
         </Box>
