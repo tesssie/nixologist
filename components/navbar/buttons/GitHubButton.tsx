@@ -4,7 +4,7 @@ import { IconButton } from '@chakra-ui/button'
 
 import { AiFillGithub } from 'react-icons/ai'
 
-export const GitHubButton = (props) => (
+export const GitHubButton = () => (
   <IconButton
     as="a"
     size="md"
@@ -15,6 +15,5 @@ export const GitHubButton = (props) => (
     icon={<AiFillGithub />}
     aria-label="Check source"
     href="https://github.com/execat/nixologist"
-    {...props}
   />
 )

@@ -12,7 +12,12 @@ import {
 import useTranslation from 'next-translate/useTranslation'
 import setLanguage from 'next-translate/setLanguage'
 
-const popoverTrigger = (props, languages, lang: string) => (
+const languages = {
+  en: '🇺🇸 English',
+  mr: '🇮🇳 मराठी',
+}
+
+const popoverTrigger = (lang: string) => (
   <PopoverTrigger>
     <Button
       size="md"
@@ -21,14 +26,13 @@ const popoverTrigger = (props, languages, lang: string) => (
       color="current"
       marginLeft="2"
       aria-label="Switch language"
-      {...props}
     >
       {languages[lang]}
     </Button>
   </PopoverTrigger>
 )
 
-const popoverContent = (languages, onClose: () => void) => (
+const popoverContent = (onClose: () => void) => (
   <PopoverContent>
     <PopoverArrow />
     <PopoverBody align="center">
@@ -50,18 +54,15 @@ const popoverContent = (languages, onClose: () => void) => (
   </PopoverContent>
 )
 
-export const LanguageSwitcher = (props) => {
+export const LanguageSwitcher = () => {
   const { lang } = useTranslation('chakra')
-  const languages = {
-    en: '🇺🇸 English',
-    mr: '🇮🇳 मराठी',
-  }
+
   return (
     <Popover>
       {({ onClose }) => (
         <>
-          {popoverTrigger(props, languages, lang)}
-          {popoverContent(languages, onClose)}
+          {popoverTrigger(lang)}
+          {popoverContent(onClose)}
         </>
       )}
     </Popover>

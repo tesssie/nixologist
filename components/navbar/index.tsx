@@ -26,7 +26,6 @@ export const Navbar = () => {
   return (
     <Box pos="relative">
       <chakra.header
-        ref={ref}
         shadow={y > height ? 'sm' : undefined}
         transition="box-shadow 0.2s"
         borderTopColor="brand.400"

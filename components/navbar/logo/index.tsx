@@ -10,7 +10,7 @@ const spin = keyframes`
   to { transform: rotate(360deg); }
 `
 
-export const Logo = React.forwardRef<ImageProps, 'img'>((props, ref) => {
+export const Logo: React.FC = (props) => {
   const prefersReducedMotion = usePrefersReducedMotion()
 
   const animation = prefersReducedMotion
@@ -23,8 +23,7 @@ export const Logo = React.forwardRef<ImageProps, 'img'>((props, ref) => {
       src="logo.svg"
       h="16"
       p="1"
-      ref={ref}
       {...props}
     />
   )
-})
+}
