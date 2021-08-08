@@ -1,20 +1,20 @@
-import React from 'react'
+import React from "react"
 
-import { Button } from '@chakra-ui/button'
+import { Button } from "@chakra-ui/button"
 import {
   PopoverTrigger,
   PopoverContent,
   PopoverArrow,
   PopoverBody,
   Popover,
-} from '@chakra-ui/popover'
+} from "@chakra-ui/popover"
 
-import useTranslation from 'next-translate/useTranslation'
-import setLanguage from 'next-translate/setLanguage'
+import useTranslation from "next-translate/useTranslation"
+import setLanguage from "next-translate/setLanguage"
 
 const languages = {
-  en: '🇺🇸 English',
-  mr: '🇮🇳 मराठी',
+  en: "🇺🇸 English",
+  mr: "🇮🇳 मराठी",
 }
 
 const popoverTrigger = (lang: string) => (
@@ -55,7 +55,7 @@ const popoverContent = (onClose: () => void) => (
 )
 
 export const LanguageSwitcher = () => {
-  const { lang } = useTranslation('chakra')
+  const { lang } = useTranslation("chakra")
 
   return (
     <Popover>

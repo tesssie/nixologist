@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react"
 
-import Icon from '@chakra-ui/icon'
-import { Box } from '@chakra-ui/layout'
+import Icon from "@chakra-ui/icon"
+import { Box } from "@chakra-ui/layout"
 
-import { FaHeart } from 'react-icons/fa'
+import { FaHeart } from "react-icons/fa"
 
 export const SponsorButton = () => (
   <Box
-    display={{ base: 'none', md: 'flex' }}
+    display={{ base: "none", md: "flex" }}
     alignItems="center"
     as="a"
     aria-label="Sponsor Nixologist"
-    href={''}
+    href={""}
     target="_blank"
     rel="noopener noreferrer"
     bg="gray.50"
@@ -25,14 +25,14 @@ export const SponsorButton = () => (
     outline="0"
     transition="all 0.3s"
     _hover={{
-      bg: 'gray.100',
-      borderColor: 'gray.300',
+      bg: "gray.100",
+      borderColor: "gray.300",
     }}
     _active={{
-      borderColor: 'gray.200',
+      borderColor: "gray.200",
     }}
     _focus={{
-      boxShadow: 'outline',
+      boxShadow: "outline",
     }}
     ml={5}
   >

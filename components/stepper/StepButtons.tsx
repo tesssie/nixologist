@@ -1,13 +1,13 @@
-import * as React from "react";
-import { Button, Flex } from "@chakra-ui/react";
+import * as React from "react"
+import { Button, Flex } from "@chakra-ui/react"
 
 type StepButtonsProps = {
-  nextStep?: () => void;
-  prevStep?: () => void;
-  prevDisabled?: boolean;
-  nextDisabled?: boolean;
-  isLast?: boolean;
-};
+  nextStep?: () => void
+  prevStep?: () => void
+  prevDisabled?: boolean
+  nextDisabled?: boolean
+  isLast?: boolean
+}
 
 export const StepButtons = ({
   nextStep,
@@ -31,5 +31,5 @@ export const StepButtons = ({
         {isLast ? "Finish" : "Next"}
       </Button>
     </Flex>
-  );
-};
+  )
+}

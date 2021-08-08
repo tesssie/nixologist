@@ -1,14 +1,17 @@
-import * as React from "react";
-import { Button, Flex, FlexProps, Heading } from "@chakra-ui/react";
-import { motion, MotionProps } from "framer-motion";
+import * as React from "react"
+import { Button, Flex, FlexProps, Heading } from "@chakra-ui/react"
+import { motion, MotionProps } from "framer-motion"
 
 type ResetPromptProps = Omit<FlexProps, keyof MotionProps> & {
-  onReset: () => void;
-};
+  onReset: () => void
+}
 
-const MotionFlex = motion<FlexProps>(Flex);
+const MotionFlex = motion<FlexProps>(Flex)
 
-export const ResetPrompt = ({ onReset, ...rest }: ResetPromptProps): JSX.Element => {
+export const ResetPrompt = ({
+  onReset,
+  ...rest
+}: ResetPromptProps): JSX.Element => {
   return (
     <MotionFlex
       px={4}
@@ -24,10 +27,10 @@ export const ResetPrompt = ({ onReset, ...rest }: ResetPromptProps): JSX.Element
         Reset
       </Button>
     </MotionFlex>
-  );
-};
+  )
+}
 
 ResetPrompt.defaultProps = {
   justifyContent: "center",
   alignItems: "center",
-};
+}

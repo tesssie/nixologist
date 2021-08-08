@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from "react"
 import {
   ChakraProvider,
   Box,
@@ -6,20 +6,20 @@ import {
   Grid,
   extendTheme,
   useMediaQuery,
-} from '@chakra-ui/react'
-import { Navbar, Stepper } from '@components'
-import useTranslation from 'next-translate/useTranslation'
-import { StepsStyleConfig as Steps } from 'chakra-ui-steps';
+} from "@chakra-ui/react"
+import { Navbar, Stepper } from "@components"
+import useTranslation from "next-translate/useTranslation"
+import { StepsStyleConfig as Steps } from "chakra-ui-steps"
 
 const theme = extendTheme({
   components: {
     Steps,
-  }
+  },
 })
 
 export const Chakra = () => {
-  const { t, lang } = useTranslation('chakra')
-  const documentation = t('documentation')
+  const { t, lang } = useTranslation("chakra")
+  const documentation = t("documentation")
   const [isMobile] = useMediaQuery("(max-width: 43em)")
   return (
     <ChakraProvider theme={theme}>

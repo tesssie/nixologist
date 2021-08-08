@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react"
 
-import { IconButton } from '@chakra-ui/button'
+import { IconButton } from "@chakra-ui/button"
 
-import { AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub } from "react-icons/ai"
 
 export const GitHubButton = () => (
   <IconButton

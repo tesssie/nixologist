@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react"
 
-import { Box, Flex, Link, HStack } from '@chakra-ui/layout'
-import { chakra } from '@chakra-ui/system'
+import { Box, Flex, Link, HStack } from "@chakra-ui/layout"
+import { chakra } from "@chakra-ui/system"
 
-import { useViewportScroll } from 'framer-motion'
+import { useViewportScroll } from "framer-motion"
 
 import {
   ColorModeSwitcher,
   GitHubButton,
   LanguageSwitcher,
   SponsorButton,
-} from './buttons'
-import { Logo } from './logo'
+} from "./buttons"
+import { Logo } from "./logo"
 
 export const Navbar = () => {
   const ref = React.useRef()
@@ -26,7 +26,7 @@ export const Navbar = () => {
   return (
     <Box pos="relative">
       <chakra.header
-        shadow={y > height ? 'sm' : undefined}
+        shadow={y > height ? "sm" : undefined}
         transition="box-shadow 0.2s"
         borderTopColor="brand.400"
         w="full"
