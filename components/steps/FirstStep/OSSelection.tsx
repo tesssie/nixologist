@@ -1,55 +1,35 @@
-import {
-  Box,
-  Flex,
-  SimpleGrid,
-  Stat,
-  StatLabel,
-  StatNumber,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, SimpleGrid, useColorModeValue } from "@chakra-ui/react"
 import React, { ReactNode } from "react"
 import { SiNixos, SiApple, SiLinux } from "react-icons/si"
 
 interface OSCardProps {
   title: string
-  stat: string
   icon: ReactNode
 }
 
-const OSCard = ({ title, stat, icon }: OSCardProps) => (
-  <Stat
-    px={{ base: 2, md: 8 }}
+const OSCard = ({ title, icon }: OSCardProps) => (
+  <Box
+    as="button"
+    px={{ base: 2, md: 5 }}
     py={"5"}
     shadow={"xl"}
     border={"1px solid"}
+    color={useColorModeValue("gray.800", "gray.200")}
     borderColor={useColorModeValue("gray.500", "gray.500")}
     backgroundColor={useColorModeValue("green.100", "gray.700")}
     rounded={"lg"}
+    my={"auto"}
+    alignContent={"center"}
+    onClick={() => console.log(`Clicked ${title}`)}
   >
-    <Flex justifyContent={"space-between"}>
-      <Box pl={{ base: 2, md: 4 }}>
-        <StatLabel fontWeight={"medium"} isTruncated>
-          {title}
-        </StatLabel>
-        <StatNumber fontSize={"2xl"} fontWeight={"medium"}>
-          {stat}
-        </StatNumber>
-      </Box>
-      <Box
-        my={"auto"}
-        color={useColorModeValue("gray.800", "gray.200")}
-        alignContent={"center"}
-      >
-        {icon}
-      </Box>
-    </Flex>
-  </Stat>
+    {icon}
+  </Box>
 )
 
 export const OSSelection = () => (
-  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 5, lg: 8 }}>
-    <OSCard title={"NixOS"} stat={"NixOS"} icon={<SiNixos size={"3em"} />} />
-    <OSCard title={"macOS"} stat={"macOS"} icon={<SiApple size={"3em"} />} />
-    <OSCard title={"Others"} stat={"Others"} icon={<SiLinux size={"3em"} />} />
+  <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+    <OSCard title={"NixOS"} icon={<SiNixos size={"5em"} />} />
+    <OSCard title={"macOS"} icon={<SiApple size={"5em"} />} />
+    <OSCard title={"Others"} icon={<SiLinux size={"5em"} />} />
   </SimpleGrid>
 )
